@@ -1,0 +1,35 @@
+﻿@model MvcCv.Models.Entity.TBLSkill
+
+
+@{
+    ViewBag.Title = "YetenekGetir";
+    Layout = "~/Views/About/Index.cshtml";
+}
+
+
+<h2>UpdateAuthor</h2>
+
+
+@using (Html.BeginForm("YetenekGetir", "Yetenek", FormMethod.Post))
+{
+    <div style="margin-bottom:15px"></div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.ID)
+        @Html.TextBoxFor(c => c.ID, new { @class = "form-control" })
+
+        <br />
+        @Html.LabelFor(c => c.Skill)
+        @Html.TextBoxFor(c => c.Skill, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(c => c.acıklama)
+        @Html.TextBoxFor(c => c.acıklama, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(c => c.oran)
+        @Html.TextAreaFor(c => c.oran, new { @class = "form-control" })
+        <br />
+    </div>
+    <div>
+
+        <button class="btn btn-warning"> Güncelle</button>
+    </div>
+}

@@ -1,0 +1,32 @@
+﻿@model MvcCv.Models.Entity.TBLSkill
+@{
+    ViewBag.Title = "AddSkill";
+    Layout = "~/Views/About/Index.cshtml";
+}
+
+
+
+<div class="resume-section-content">
+    <h2 class="mb-5">Yetenek Ekle</h2>
+    
+
+    <form method="post">
+
+
+        @Html.Label("baslık")
+        @Html.TextBoxFor(x => x.Skill, new {@class="form-control"})
+        <br />
+        @Html.Label("acıklama")
+        @Html.TextBoxFor(x => x.acıklama, new { @class = "form-control" })
+        <br />
+        @Html.Label("oran")
+        @Html.TextBoxFor(x => x.oran, new { @class = "form-control" })
+        <br />
+
+
+        <button class="btn btn-dark">Ekle</button>
+    </form>
+</div>
+
+
+

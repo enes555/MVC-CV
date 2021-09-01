@@ -1,0 +1,34 @@
+﻿@using MvcCv.Models.Entity
+
+@model List<TBLCommunication>
+
+
+<div class="resume-section-content">
+    <form method="post">
+        <h2 class="mb-5">İletişim</h2>
+
+        <label>Ad Soyad</label>
+        <br />
+        <input type="text" class="form-control " name="NameSurname" />
+        <br />
+        <label>Mail</label>
+        <br />
+        <input type="text" class="form-control" name="Mail" />
+        <br />
+
+        <label>Konu</label>
+        <br />
+        <input type="text" class="form-control" name="topic" />
+        <br />
+        <label>Mesaj</label>
+        <br />
+        <input type="text" class="form-control" name="Message" />
+        <br />
+    
+        <button class="btn btn-dark">Kaydet</button>
+    </form>
+</div>
+
+
+
+

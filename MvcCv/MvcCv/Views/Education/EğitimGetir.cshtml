@@ -1,0 +1,35 @@
+﻿@model MvcCv.Models.Entity.TBLEducation
+@{
+    ViewBag.Title = "EğitimGetir";
+    Layout = "~/Views/About/Index.cshtml";
+}
+
+<h2>EğitimGetir</h2>
+
+
+@using (Html.BeginForm("EğitimGetir", "Education", FormMethod.Post))
+{
+    <div style="margin-bottom:15px"></div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.ID)
+        @Html.TextBoxFor(c => c.ID, new { @class = "form-control" })
+
+        <br />
+        @Html.LabelFor(c => c.Title)
+        @Html.TextBoxFor(c => c.Title, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(c => c.subtitle)
+        @Html.TextBoxFor(c => c.subtitle, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(c => c.subtitle2)
+        @Html.TextAreaFor(c => c.subtitle2, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(c => c.GNO)
+        @Html.TextAreaFor(c => c.GNO, new { @class = "form-control" })
+        <br />
+    </div>
+    <div>
+
+        <button class="btn btn-warning"> Güncelle</button>
+    </div>
+}
